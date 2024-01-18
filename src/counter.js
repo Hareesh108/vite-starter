@@ -16,6 +16,12 @@ export const initializeCounter = (doc = globalThis.document) => {
 
   const decrement = () => {
     count--;
+
+    if (count > 0) {
+      // dynamic import
+      import('./banner').then(({ initializeCounter }) => {});
+    }
+
     render();
   };
 
