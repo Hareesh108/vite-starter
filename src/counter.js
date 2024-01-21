@@ -1,3 +1,9 @@
+// sass apply
+import './sassy.scss';
+
+// // postcss apply
+// import './postcss.css';
+
 export const initializeCounter = (doc = globalThis.document) => {
   const countElement = doc.getElementById('count');
   const incrementButton = doc.getElementById('increment');
@@ -19,7 +25,9 @@ export const initializeCounter = (doc = globalThis.document) => {
 
     if (count > 0) {
       // dynamic import
-      import('./banner').then(({ initializeCounter }) => {});
+      import('./banner').then(({ addBanner }) => {
+        addBanner('Hareesh');
+      });
     }
 
     render();
