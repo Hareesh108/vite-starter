@@ -24,10 +24,10 @@ export const initializeCounter = (doc = globalThis.document) => {
     count--;
 
     if (count > 0) {
-      // dynamic import
-      import('./banner').then(({ addBanner }) => {
-        addBanner('Hareesh');
-      });
+      // // dynamic import
+      // import('./banner').then(({ addBanner }) => {
+      //   addBanner('Hareesh');
+      // });
     }
 
     render();
